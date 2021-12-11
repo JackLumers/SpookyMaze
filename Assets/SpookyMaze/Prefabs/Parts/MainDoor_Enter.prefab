@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4886362075532610327, guid: 5253f294fa90a494796324987dd547ed, type: 3}
+      propertyPath: doorType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6729313519299933958, guid: 5253f294fa90a494796324987dd547ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
