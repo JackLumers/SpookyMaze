@@ -7,18 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4886362075532610327, guid: 5253f294fa90a494796324987dd547ed, type: 3}
-      propertyPath: doorType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6729313519299933958, guid: 5253f294fa90a494796324987dd547ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e1566a55f7fab824aa5e63e76de4c2d3, type: 2}
+      objectReference: {fileID: 2100000, guid: ce0f072847d22b14fba61e5573536483, type: 2}
     - target: {fileID: 6729313520022245799, guid: 5253f294fa90a494796324987dd547ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e1566a55f7fab824aa5e63e76de4c2d3, type: 2}
+      objectReference: {fileID: 2100000, guid: ce0f072847d22b14fba61e5573536483, type: 2}
     - target: {fileID: 6729313520527110180, guid: 5253f294fa90a494796324987dd547ed, type: 3}
       propertyPath: m_Name
       value: MainDoor_Enter
@@ -70,6 +66,6 @@ PrefabInstance:
     - target: {fileID: 8756183811779979801, guid: 5253f294fa90a494796324987dd547ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e1566a55f7fab824aa5e63e76de4c2d3, type: 2}
+      objectReference: {fileID: 2100000, guid: ce0f072847d22b14fba61e5573536483, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5253f294fa90a494796324987dd547ed, type: 3}

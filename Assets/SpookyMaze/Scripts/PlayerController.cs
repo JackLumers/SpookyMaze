@@ -2,22 +2,31 @@
 using SpookyMaze.Scripts.LookDetection;
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace SpookyMaze.Scripts
 {
     [RequireComponent(typeof(ThirdPersonController))]
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private LookDetector lookDetector;
+        [SerializeField] private LookDetectionEvent doorLookDetection;
+        [SerializeField] private InputAction openDoorAction;
+
+        private void Awake()
+        {
+            openDoorAction.Enable();
+            openDoorAction.performed += context => TryOpenDoor();
+        }
 
         /// <summary>
         /// Checks if player looking at the door and tries to open it.
         /// </summary>
-        public void TryOpenDoor()
+        private void TryOpenDoor()
         {
-            if (lookDetector.LookingAt != null)
+            Debug.Log($"[{nameof(PlayerController)}] {nameof(TryOpenDoor)} called.");
+            if (doorLookDetection.LookingAt != null)
             {
-                Door door = lookDetector.LookingAt.GetComponent<Door>();
+                Door door = doorLookDetection.LookingAt.GetComponent<Door>();
                 if (door != null)
                 {
                     door.Open(true).Forget();

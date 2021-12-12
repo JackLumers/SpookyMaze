@@ -1,35 +1,34 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SpookyMaze.Scripts.LookDetection
 {
     [RequireComponent(typeof(Collider))]
     public class LookDetector : MonoBehaviour
     {
-        [CanBeNull] public GameObject LookingAt { get; private set; }
         [SerializeField] private LookDetectionEvent[] lookDetectionEvents;
 
-        private void OnCollisionEnter(Collision other)
-        {
-            LookingAt = other.gameObject;
-            Debug.Log($"Collision with object {other.gameObject.name}");
+        private void OnTriggerEnter(Collider other)
+        {   
+            Debug.Log($"[{nameof(LookDetector)}] Collision with object '{other.gameObject.name}'");
+            
             foreach (var lookDetectionEvent in lookDetectionEvents)
             {
                 if (other.gameObject.CompareTag(lookDetectionEvent.ObjectTag))
                 {
-                    lookDetectionEvent.Raise(gameObject, true);
+                    lookDetectionEvent.Raise(other.gameObject, true);
                 }
             }
         }
-
-        private void OnCollisionExit(Collision other)
+        
+        private void OnTriggerExit(Collider other)
         {
-            LookingAt = null;
+            Debug.Log($"[{nameof(LookDetector)}] Collision with object '{other.gameObject.name}'");
+            
             foreach (var lookDetectionEvent in lookDetectionEvents)
             {
                 if (other.gameObject.CompareTag(lookDetectionEvent.ObjectTag))
                 {
-                    lookDetectionEvent.Raise(gameObject, false);
+                    lookDetectionEvent.Raise(other.gameObject, false);
                 }
             }
         }
