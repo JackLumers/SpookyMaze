@@ -10,15 +10,15 @@ namespace SpookyMaze.Scripts.UI
         
         private void Awake()
         {
-            doorLookDetection.LookDetected += Call;
+            doorLookDetection.LookDetected += DoorLookDetected;
         }
 
         private void OnDestroy()
         {
-            doorLookDetection.LookDetected -= Call;
+            doorLookDetection.LookDetected -= DoorLookDetected;
         }
 
-        private void Call(GameObject door, bool isLookingAt)
+        private void DoorLookDetected(GameObject door, bool isLookingAt)
         {
             if (isLookingAt)
             {

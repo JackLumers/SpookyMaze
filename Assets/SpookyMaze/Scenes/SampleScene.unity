@@ -1647,6 +1647,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 422599284}
     m_Modifications:
+    - target: {fileID: 6944991442355717232, guid: d27f6e39e75fe944c94ff60d0b4c9269, type: 3}
+      propertyPath: openDoorAction.m_SingletonActionBindings.Array.data[0].m_Processors
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944991442355717232, guid: d27f6e39e75fe944c94ff60d0b4c9269, type: 3}
+      propertyPath: openDoorAction.m_SingletonActionBindings.Array.data[0].m_Interactions
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944991442355717232, guid: d27f6e39e75fe944c94ff60d0b4c9269, type: 3}
+      propertyPath: openDoorAction.m_SingletonActionBindings.Array.data[1].m_Interactions
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6944991442355717233, guid: d27f6e39e75fe944c94ff60d0b4c9269, type: 3}
       propertyPath: m_Name
       value: Player

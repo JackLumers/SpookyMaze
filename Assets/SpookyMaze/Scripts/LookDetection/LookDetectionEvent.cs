@@ -18,5 +18,11 @@ namespace SpookyMaze.Scripts.LookDetection
             LookingAt = isLookingAt ? gameObject : null;
             LookDetected?.Invoke(gameObject, isLookingAt);
         }
+
+        public void ResetState()
+        {
+            LookingAt = null;
+            LookDetected = null;
+        }
     }
 }

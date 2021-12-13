@@ -32,5 +32,13 @@ namespace SpookyMaze.Scripts.LookDetection
                 }
             }
         }
+
+        private void OnDisable()
+        {
+            foreach (var lookDetectionEvent in lookDetectionEvents)
+            {
+                lookDetectionEvent.ResetState();
+            }
+        }
     }
 }
