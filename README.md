@@ -3,6 +3,17 @@ A demo game for my employment opportunity. Based on given task and technical spe
 
 # Project installation
 
+# Architecture (на русском так как запарно переводить)
+- LookDetector.
+Определение объекта на который смотрит игрок.
+- Door и Room.
+Логика дверей и комнат.
+- ThirsPersonController и Cinemachine.
+Логика камеры и управления персонажем.
+- Input System.
+Логика обработки инпута игрока.
+
+
 # Used Assets
 - [Starter Assets - Third Person Character Controller](https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526)
 
