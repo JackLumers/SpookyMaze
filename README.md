@@ -36,5 +36,4 @@ If you want to play - download build from releases page.
 - [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine%402.1/manual/index.html)
 - [(Built-In) Animation Module](https://docs.unity3d.com/ScriptReference/UnityEngine.AnimationModule.html)
 - [(Built-In) UI Module](https://docs.unity3d.com/ScriptReference/UnityEngine.UIModule.html)
-- [(Built-In) Text Mesh Pro](https://docs.unity3d.com/Manual/com.unity.textmeshpro.html)
 - [(Built-In) AI Module](https://docs.unity3d.com/Manual/com.unity.modules.ai.html)
