@@ -29,7 +29,7 @@ namespace SpookyMaze.Scripts
                 Door door = doorLookDetection.LookingAt.GetComponent<Door>();
                 if (door != null)
                 {
-                    door.Open(true).Forget();
+                    door.Open().Forget();
                 }
             }
         }

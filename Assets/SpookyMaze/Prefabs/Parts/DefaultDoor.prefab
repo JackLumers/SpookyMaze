@@ -16,8 +16,8 @@ GameObject:
   m_Name: RightBalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8911682983387680405
 Transform:
@@ -111,8 +111,8 @@ GameObject:
   m_Name: TopBalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8911682983921735982
 Transform:
@@ -204,11 +204,12 @@ GameObject:
   - component: {fileID: 8911682984070081428}
   - component: {fileID: 2303554525296132965}
   - component: {fileID: 6839448533509796947}
+  - component: {fileID: 6240234014284319116}
   m_Layer: 0
   m_Name: DoorCollider
   m_TagString: Door
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8911682984070081429
@@ -237,10 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da8be8df7d2d0444bb2a966253c621d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openDoorClip: {fileID: 7400000, guid: bc7d87ec3fb3c5c41b0064c578039ce6, type: 2}
-  closeDoorClip: {fileID: 7400000, guid: 68fab36a8184e1a45ad55fe5889ebdd7, type: 2}
   connectedRooms: []
   doorType: 0
+  animationSeconds: 1
 --- !u!33 &8911682984070081427
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ Animator:
   m_GameObject: {fileID: 8911682984070081430}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f934ae78c77bfd84faf9ec65cec0882d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -322,6 +322,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!208 &6240234014284319116
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8911682984070081430}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 1.5}
+  m_MoveThreshold: 0.3
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.1
 --- !u!1 &8911682984925031750
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,8 +354,8 @@ GameObject:
   m_Name: LeftBalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8911682984925031749
 Transform:

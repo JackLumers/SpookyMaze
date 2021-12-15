@@ -1,19 +1,17 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Playables;
 
 namespace SpookyMaze.Scripts
 {
     [RequireComponent(typeof(Animator))]
     public class Door : MonoBehaviour
     {
-        [SerializeField] private AnimationClip openDoorClip;
-        [SerializeField] private AnimationClip closeDoorClip;
         [SerializeField] private Room[] connectedRooms;
         [SerializeField] private EDoorType doorType;
+        [SerializeField] private float animationSeconds;
         
-        private PlayableDirector _playableDirector;
+        private Animator _animator;
         private CancellationTokenSource _openCancellationTokenSource;
 
         public bool IsOpened { get; private set; }
@@ -25,38 +23,48 @@ namespace SpookyMaze.Scripts
             _animator = GetComponent<Animator>();
         }
         
-        public async UniTask Open(bool open)
+        public async UniTask Close()
         {
-            Debug.Log($"[{nameof(Door)}] {nameof(Open)} called.");
+            CancelProcess();
+            _animator.Play("Close");
             
-            // Perform only if not in process right now
-            if (_openCancellationTokenSource == null || _openCancellationTokenSource.IsCancellationRequested)
-            {
-                _openCancellationTokenSource?.Cancel();
-                _openCancellationTokenSource?.Dispose();
-                _openCancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(this.GetCancellationTokenOnDestroy());
+            await UniTask.Delay((int) animationSeconds * 1000, DelayType.DeltaTime,
+                cancellationToken: _openCancellationTokenSource.Token);
+            _openCancellationTokenSource?.Cancel();
+        }
+        
+        public async UniTask Open()
+        {
+            CancelProcess();
+            _animator.Play("Open");
 
-                if (open)
-                {
-                    AnimationPlayableUtilities.PlayClip(_animator, openDoorClip, out _playableGraph);
-                
-                    await UniTask.Delay((int)openDoorClip.length, DelayType.DeltaTime, 
-                        cancellationToken: _openCancellationTokenSource.Token);
-                    _openCancellationTokenSource?.Cancel();
-                }
-                else
-                {
-                    AnimationPlayableUtilities.PlayClip(_animator, closeDoorClip, out _playableGraph);
-                
-                    await UniTask.Delay((int)closeDoorClip.length, DelayType.DeltaTime,
-                        cancellationToken: _openCancellationTokenSource.Token);
-                    _openCancellationTokenSource?.Cancel();
-                }
-            
-                IsOpened = open;
+            await UniTask.Delay((int) animationSeconds * 1000, DelayType.DeltaTime,
+                cancellationToken: _openCancellationTokenSource.Token);
+            _openCancellationTokenSource?.Cancel();
+        }
+        
+        public async UniTask Switch()
+        {
+            if (IsOpened)
+            {
+                await Close();
             }
+            else
+            {
+                await Open();
+            }
+
+            IsOpened = !IsOpened;
         }
 
+        private void CancelProcess()
+        {
+            _openCancellationTokenSource?.Cancel();
+            _openCancellationTokenSource?.Dispose();
+            _openCancellationTokenSource =
+                CancellationTokenSource.CreateLinkedTokenSource(this.GetCancellationTokenOnDestroy());
+        }
+        
         public enum EDoorType
         {
             Default,

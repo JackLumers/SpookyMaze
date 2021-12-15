@@ -22,7 +22,6 @@ namespace SpookyMaze.Scripts.LookDetection
         public void ResetState()
         {
             LookingAt = null;
-            LookDetected = null;
         }
     }
 }

@@ -2023,7 +2023,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 09fd175f-ce90-4414-892a-2a9b733bd55c
       m_Path: <Mouse>/leftButton
-      m_Interactions: Press
+      m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Open Door
@@ -2031,7 +2031,7 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 716e2eac-edd0-404b-a638-b0a4a07993d2
       m_Path: <Keyboard>/e
-      m_Interactions: Press
+      m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Open Door
