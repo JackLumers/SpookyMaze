@@ -3,7 +3,7 @@ A demo game for my employment opportunity. Based on given task and technical spe
 
 # Project installation
 
-# Architecture (на русском так как запарно переводить)
+# Architecture (on Russian 'cause fuck it and you'll probably will not have a good time translating it)
 
 - Логика реакций на события (открытие двери, определение того что игрок смотрит на дверь, запуск таймера и пр.) вдохновлена архитектурой через SO делегаты, которую Юнитеки показывали на своей конференции **[здесь](https://youtu.be/raQ3iHhE_Kk?t=1682)** (по таймкоду 28:00). Она изменена под нужды проекта, и также я не добавляю вызов функций через Unity Event в инспекторе, так мне удобнее смотреть что где вызывается из кода, а не инспектора.
 
