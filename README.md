@@ -2,7 +2,8 @@
 A demo game for my employment opportunity. Based on given task and technical specifications, with a portion of my own creative ideas (a.k.a programmer art, lol)
 
 # Project installation
-If you want to open project - just download it via git and open it with **Unity 2020.3.24f1.**
+If you want to see the project - just download it via git and open it with **Unity 2020.3.24f1.**
+
 If you want to play - download build from releases page.
 
 # Architecture
