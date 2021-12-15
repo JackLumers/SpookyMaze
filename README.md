@@ -25,7 +25,7 @@ If you want to play - download build from releases page.
 
 - UI реализован через встроенный в Unity **UI Module**.
 
-- Логика контроллера игры реализована через... [дописать].
+- Основная игровая логика (управление комнатами, указание таргета ИксИна и пр.) описана в Game Controller.
 
 # Used Assets
 - [Starter Assets - Third Person Character Controller](https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526)
