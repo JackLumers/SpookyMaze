@@ -34,3 +34,4 @@ A demo game for my employment opportunity. Based on given task and technical spe
 - [(Built-In) Animation Module](https://docs.unity3d.com/ScriptReference/UnityEngine.AnimationModule.html)
 - [(Built-In) UI Module](https://docs.unity3d.com/ScriptReference/UnityEngine.UIModule.html)
 - [(Built-In) Text Mesh Pro](https://docs.unity3d.com/Manual/com.unity.textmeshpro.html)
+- [(Built-In) AI Module](https://docs.unity3d.com/Manual/com.unity.modules.ai.html)
