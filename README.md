@@ -7,7 +7,7 @@ If you want to see the project - just download it via git and open it with **Uni
 ~~If you want to play - download build from releases page.~~
 
 # Architecture
-*In Russian 'cause fuck it and you'll probably will not have a good time translating it.*
+*In Russian 'cause fuck it and you'll probably not have a good time translating it.*
 
 - Логика реакций на события (открытие двери, определение того что игрок смотрит на дверь, выигрышь и проигрышь) вдохновлена архитектурой через SO делегаты, которую Юнитеки показывали на своей конференции **[здесь](https://youtu.be/raQ3iHhE_Kk?t=1682)** (по таймкоду 28:00). Она изменена под нужды проекта, и также я не добавляю вызов функций через Unity Event в инспекторе, так как мне удобнее смотреть что где вызывается из кода, а не инспектора.
 
