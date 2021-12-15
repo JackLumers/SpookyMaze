@@ -21,12 +21,12 @@ namespace SpookyMaze.Scripts.UI
 
         private void OnWin()
         {
-            loseScreen.gameObject.SetActive(true);
+            winScreen.gameObject.SetActive(true);
         }
 
         private void OnPlayerKilled()
         {
-            winScreen.gameObject.SetActive(true);
+            loseScreen.gameObject.SetActive(true);
         }
 
         private void OnDestroy()
