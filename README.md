@@ -1,6 +1,8 @@
 # SpookyMaze
 A demo game for my employment opportunity. Based on given task and technical specifications, with a portion of my own creative ideas (a.k.a programmer art, lol)
 
+4 days' work. Some mechanics weren't implemented fully and could be more polished.
+
 # Project installation
 If you want to see the project - just download it via git and open it with **Unity 2020.3.24f1.**
 
