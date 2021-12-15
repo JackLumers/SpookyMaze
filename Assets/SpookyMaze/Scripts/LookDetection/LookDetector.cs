@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SpookyMaze.Scripts.Events;
+using UnityEngine;
 
 namespace SpookyMaze.Scripts.LookDetection
 {
@@ -32,8 +33,8 @@ namespace SpookyMaze.Scripts.LookDetection
                 }
             }
         }
-
-        private void OnDisable()
+        
+        private void OnDestroy()
         {
             foreach (var lookDetectionEvent in lookDetectionEvents)
             {

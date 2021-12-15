@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 8910196979846278774}
   - component: {fileID: 2457342670547045927}
   m_Layer: 0
-  m_Name: Door
+  m_Name: DoorExit
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -271,7 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da8be8df7d2d0444bb2a966253c621d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedRooms: []
   doorType: 2
   animationSeconds: 1
 --- !u!95 &1543592847685731263

@@ -12,7 +12,7 @@ NavMeshProjectSettings:
   - name: Jump
     cost: 3
   - name: RoomCenter
-    cost: 1
+    cost: 2
   - name: 
     cost: 1
   - name: 

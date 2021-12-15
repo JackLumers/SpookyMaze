@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace SpookyMaze.Scripts.LookDetection
+namespace SpookyMaze.Scripts.Events
 {
     [CreateAssetMenu]
     public class LookDetectionEvent : ScriptableObject
@@ -22,6 +22,7 @@ namespace SpookyMaze.Scripts.LookDetection
         public void ResetState()
         {
             LookingAt = null;
+            LookDetected = null;
         }
     }
 }
