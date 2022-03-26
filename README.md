@@ -1,6 +1,5 @@
 # SpookyMaze
-A demo game for my employment opportunity. Based on given task and technical specifications, with a portion of my own creative ideas (a.k.a programmer art, lol)
-
+A demo game for my employment opportunity.
 4 days' work. Some mechanics weren't implemented fully and could be more polished.
 
 # Project installation
